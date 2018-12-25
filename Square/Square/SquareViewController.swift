@@ -14,6 +14,10 @@ class SquareViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let view = UIView()
+        
+        self.view.addSubview(view)
     }
 
     @IBAction func buttonStartClick(_ sender: UIButton) {
