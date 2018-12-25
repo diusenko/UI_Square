@@ -11,12 +11,12 @@ import UIKit
 class SquareViewController: UIViewController {
 
     @IBOutlet var sqareView: SquareView!
-   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 
     @IBAction func buttonStartClick(_ sender: UIButton) {
-        print("start")
+        self.sqareView.animation()
     }
 }
