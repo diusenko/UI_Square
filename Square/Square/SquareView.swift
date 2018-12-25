@@ -19,6 +19,7 @@ class SquareView: UIView {
     
     private var squarePosition = Position.topLeft
     private var isAnimating = false
+    private var isStopped = true
     
     private let topLeft = CGPoint(x: 0, y: 0)
     private let topRight = CGPoint(x: 274, y: 0)
@@ -29,6 +30,8 @@ class SquareView: UIView {
     @IBOutlet weak var labelSquad: UILabel!
     
     override func draw(_ rect: CGRect) {
+        self.subviews.first?.layer.cornerRadius = 10
+        self.labelSquad.layer.cornerRadius = 10
         self.buttonStart.layer.cornerRadius = 10
         super.draw(rect)
     }
@@ -52,18 +55,29 @@ class SquareView: UIView {
             self.labelSquad.frame.origin = labelPosition
     }
     
-    func animation(duration: TimeInterval = 2) {
-        print("animate")
+    func setSquarePosition(duration: TimeInterval) {
         if !self.isAnimating {
             self.isAnimating = true
             UIView.animate(withDuration: duration,
                 animations: { self.setSquarePosition() },
                 completion: { finished in
                     self.isAnimating = false
-                    self.animation(duration: duration)
+                    if !self.isStopped {
+                        self.setSquarePosition(duration: duration)
+                    }
                 }
             )
         }
     }
     
+    func animation(duration: TimeInterval = 2) {
+        self.isStopped.toggle()
+        
+        if !self.isStopped {
+            self.buttonStart.setTitle("Stop", for: .normal)
+            setSquarePosition(duration: duration)
+        } else {
+            self.buttonStart.setTitle("Start", for: .normal)
+        }
+    }
 }
