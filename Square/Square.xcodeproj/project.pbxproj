@@ -15,6 +15,7 @@
 		3F21137421D12DB8005A46E5 /* SquareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F21137221D12DB8005A46E5 /* SquareViewController.swift */; };
 		3F21137521D12DB8005A46E5 /* SquareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F21137321D12DB8005A46E5 /* SquareViewController.xib */; };
 		3F21137721D12F40005A46E5 /* SquareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F21137621D12F40005A46E5 /* SquareView.swift */; };
+		3FB277CC21D3DCF500894AE0 /* Modal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB277CB21D3DCF500894AE0 /* Modal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		3F21137221D12DB8005A46E5 /* SquareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareViewController.swift; sourceTree = "<group>"; };
 		3F21137321D12DB8005A46E5 /* SquareViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SquareViewController.xib; sourceTree = "<group>"; };
 		3F21137621D12F40005A46E5 /* SquareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareView.swift; sourceTree = "<group>"; };
+		3FB277CB21D3DCF500894AE0 /* Modal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Modal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,14 +101,12 @@
 		3F21133E21D10717005A46E5 /* Square */ = {
 			isa = PBXGroup;
 			children = (
-				3F21136F21D1173F005A46E5 /* View */,
 				3F21133F21D10717005A46E5 /* AppDelegate.swift */,
-				3F21137221D12DB8005A46E5 /* SquareViewController.swift */,
-				3F21137321D12DB8005A46E5 /* SquareViewController.xib */,
-				3F21137621D12F40005A46E5 /* SquareView.swift */,
 				3F21134621D10719005A46E5 /* Assets.xcassets */,
 				3F21134821D10719005A46E5 /* LaunchScreen.storyboard */,
 				3F21134B21D10719005A46E5 /* Info.plist */,
+				3FB277CB21D3DCF500894AE0 /* Modal.swift */,
+				3F21136F21D1173F005A46E5 /* View */,
 			);
 			path = Square;
 			sourceTree = "<group>";
@@ -132,6 +132,9 @@
 		3F21136F21D1173F005A46E5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3F21137221D12DB8005A46E5 /* SquareViewController.swift */,
+				3F21137321D12DB8005A46E5 /* SquareViewController.xib */,
+				3F21137621D12F40005A46E5 /* SquareView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 				3F21134021D10717005A46E5 /* AppDelegate.swift in Sources */,
 				3F21137421D12DB8005A46E5 /* SquareViewController.swift in Sources */,
 				3F21137721D12F40005A46E5 /* SquareView.swift in Sources */,
+				3FB277CC21D3DCF500894AE0 /* Modal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

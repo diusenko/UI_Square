@@ -10,7 +10,11 @@ import UIKit
 
 class SquareViewController: UIViewController {
 
-    @IBOutlet var sqareView: SquareView!
+    @IBOutlet var squareView: SquareView!
+    
+    public var anotherSquareView: SquareView? {
+        return self.view as? SquareView
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +24,7 @@ class SquareViewController: UIViewController {
         self.view.addSubview(view)
     }
 
-    @IBAction func buttonStartClick(_ sender: UIButton) {
-        self.sqareView.animation()
+    @IBAction func buttonStartStopClick(_ sender: UIButton) {
+        self.anotherSquareView?.animation()
     }
 }
