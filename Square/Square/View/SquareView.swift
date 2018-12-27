@@ -20,6 +20,7 @@ class SquareView: UIView {
     override func draw(_ rect: CGRect) {
         self.subviews.first?.layer.cornerRadius = 10
         self.labelSquad.layer.cornerRadius = 10
+        super.draw(rect)
     }
     
     func setSquarePosition(position: Position) {

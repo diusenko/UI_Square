@@ -17,7 +17,7 @@
 		3F21137721D12F40005A46E5 /* SquareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F21137621D12F40005A46E5 /* SquareView.swift */; };
 		3F5CFF1F21D4DB7E00F3EE85 /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5CFF1E21D4DB7E00F3EE85 /* Types.swift */; };
 		3F5CFF2221D4DD6300F3EE85 /* Optional+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5CFF2121D4DD6300F3EE85 /* Optional+Extensions.swift */; };
-		3FB277CC21D3DCF500894AE0 /* Modal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB277CB21D3DCF500894AE0 /* Modal.swift */; };
+		3FB277CC21D3DCF500894AE0 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB277CB21D3DCF500894AE0 /* Position.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +54,7 @@
 		3F21137621D12F40005A46E5 /* SquareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareView.swift; sourceTree = "<group>"; };
 		3F5CFF1E21D4DB7E00F3EE85 /* Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
 		3F5CFF2121D4DD6300F3EE85 /* Optional+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+Extensions.swift"; sourceTree = "<group>"; };
-		3FB277CB21D3DCF500894AE0 /* Modal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Modal.swift; sourceTree = "<group>"; };
+		3FB277CB21D3DCF500894AE0 /* Position.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,7 +109,7 @@
 				3F21134621D10719005A46E5 /* Assets.xcassets */,
 				3F21134821D10719005A46E5 /* LaunchScreen.storyboard */,
 				3F21134B21D10719005A46E5 /* Info.plist */,
-				3FB277CB21D3DCF500894AE0 /* Modal.swift */,
+				3FB277CB21D3DCF500894AE0 /* Position.swift */,
 				3F21136F21D1173F005A46E5 /* View */,
 				3F5CFF1D21D4DB4C00F3EE85 /* F */,
 				3F5CFF2021D4DD4100F3EE85 /* Extensions */,
@@ -297,7 +297,7 @@
 				3F21137421D12DB8005A46E5 /* SquareViewController.swift in Sources */,
 				3F21137721D12F40005A46E5 /* SquareView.swift in Sources */,
 				3F5CFF1F21D4DB7E00F3EE85 /* Types.swift in Sources */,
-				3FB277CC21D3DCF500894AE0 /* Modal.swift in Sources */,
+				3FB277CC21D3DCF500894AE0 /* Position.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
