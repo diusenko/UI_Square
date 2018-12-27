@@ -8,6 +8,24 @@
 
 import UIKit
 
-//class Square {
+typealias SuperPosition = (name: Position, coordinates: CGPoint)
+
+enum Position {
+    case topLeft
+    case topRight
+    case bottomRight
+    case bottomLeft
     
-//}
+    var nextPosition: SuperPosition {
+        switch self {
+        case .topLeft:
+            return (.topRight, CGPoint(x: 274, y: 0))
+        case .topRight:
+            return (.bottomRight, CGPoint(x: 274, y: 718))
+        case .bottomRight:
+            return (.bottomLeft, CGPoint(x: 0, y: 718))
+        case .bottomLeft:
+            return (.topLeft, CGPoint(x: 0, y: 0))
+        }
+    }
+}

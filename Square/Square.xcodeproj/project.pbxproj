@@ -15,6 +15,8 @@
 		3F21137421D12DB8005A46E5 /* SquareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F21137221D12DB8005A46E5 /* SquareViewController.swift */; };
 		3F21137521D12DB8005A46E5 /* SquareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F21137321D12DB8005A46E5 /* SquareViewController.xib */; };
 		3F21137721D12F40005A46E5 /* SquareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F21137621D12F40005A46E5 /* SquareView.swift */; };
+		3F5CFF1F21D4DB7E00F3EE85 /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5CFF1E21D4DB7E00F3EE85 /* Types.swift */; };
+		3F5CFF2221D4DD6300F3EE85 /* Optional+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5CFF2121D4DD6300F3EE85 /* Optional+Extensions.swift */; };
 		3FB277CC21D3DCF500894AE0 /* Modal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB277CB21D3DCF500894AE0 /* Modal.swift */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +52,8 @@
 		3F21137221D12DB8005A46E5 /* SquareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareViewController.swift; sourceTree = "<group>"; };
 		3F21137321D12DB8005A46E5 /* SquareViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SquareViewController.xib; sourceTree = "<group>"; };
 		3F21137621D12F40005A46E5 /* SquareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareView.swift; sourceTree = "<group>"; };
+		3F5CFF1E21D4DB7E00F3EE85 /* Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
+		3F5CFF2121D4DD6300F3EE85 /* Optional+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+Extensions.swift"; sourceTree = "<group>"; };
 		3FB277CB21D3DCF500894AE0 /* Modal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Modal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,6 +111,8 @@
 				3F21134B21D10719005A46E5 /* Info.plist */,
 				3FB277CB21D3DCF500894AE0 /* Modal.swift */,
 				3F21136F21D1173F005A46E5 /* View */,
+				3F5CFF1D21D4DB4C00F3EE85 /* F */,
+				3F5CFF2021D4DD4100F3EE85 /* Extensions */,
 			);
 			path = Square;
 			sourceTree = "<group>";
@@ -137,6 +143,22 @@
 				3F21137621D12F40005A46E5 /* SquareView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		3F5CFF1D21D4DB4C00F3EE85 /* F */ = {
+			isa = PBXGroup;
+			children = (
+				3F5CFF1E21D4DB7E00F3EE85 /* Types.swift */,
+			);
+			path = F;
+			sourceTree = "<group>";
+		};
+		3F5CFF2021D4DD4100F3EE85 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3F5CFF2121D4DD6300F3EE85 /* Optional+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,8 +293,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F21134021D10717005A46E5 /* AppDelegate.swift in Sources */,
+				3F5CFF2221D4DD6300F3EE85 /* Optional+Extensions.swift in Sources */,
 				3F21137421D12DB8005A46E5 /* SquareViewController.swift in Sources */,
 				3F21137721D12F40005A46E5 /* SquareView.swift in Sources */,
+				3F5CFF1F21D4DB7E00F3EE85 /* Types.swift in Sources */,
 				3FB277CC21D3DCF500894AE0 /* Modal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

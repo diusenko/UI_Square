@@ -12,6 +12,7 @@ class SquareViewController: UIViewController {
 
     private var isStopped = true
     
+    
     @IBOutlet var squareView: SquareView!
     
     public var anotherSquareView: SquareView? {
@@ -22,11 +23,13 @@ class SquareViewController: UIViewController {
         super.viewDidLoad()
     }
 
-    @IBAction func buttonStartStopClick(_ sender: UIButton) {
+    @IBAction func onStartStopButton(_ sender: UIButton) {
         self.isStopped.toggle()
         if !self.isStopped {
             //self.buttonStartStop.setTitle("Stop", for: .normal)
-            self.squareView.foo()
+            self.anotherSquareView.do {
+                $0.loopingMovingOfSquare()
+            }
         } else {
             //self.buttonStartStop.setTitle("Start", for: .normal)
         }
