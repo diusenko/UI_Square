@@ -9,9 +9,6 @@
 import UIKit
 
 class SquareViewController: UIViewController {
-
-    private var isStopped = true
-    
     
     @IBOutlet var squareView: SquareView!
     
@@ -23,15 +20,10 @@ class SquareViewController: UIViewController {
         super.viewDidLoad()
     }
 
-    @IBAction func onStartStopButton(_ sender: UIButton) {
-        self.isStopped.toggle()
-        if !self.isStopped {
-            //self.buttonStartStop.setTitle("Stop", for: .normal)
-            self.anotherSquareView.do {
-                $0.loopingMovingOfSquare()
-            }
-        } else {
-            //self.buttonStartStop.setTitle("Start", for: .normal)
+    @IBAction func onStart(_ sender: UIButton) {
+        self.anotherSquareView.do {
+            $0.isStopped.toggle()
+            $0.loopingMovingOfSquare()
         }
     }
 }

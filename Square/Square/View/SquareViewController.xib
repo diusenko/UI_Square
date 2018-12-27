@@ -29,7 +29,7 @@
                             <fontDescription key="fontDescription" type="system" pointSize="26"/>
                             <state key="normal" title="Start"/>
                             <connections>
-                                <action selector="onStartStopButton:" destination="-1" eventType="touchUpInside" id="WyP-yF-BHU"/>
+                                <action selector="onStart:" destination="-1" eventType="touchUpInside" id="inc-lc-D2O"/>
                             </connections>
                         </button>
                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="R3s-mE-ZLR">

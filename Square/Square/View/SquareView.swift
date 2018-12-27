@@ -10,11 +10,13 @@ import UIKit
 
 class SquareView: UIView {
     
-    private var isAnimating = false
     private var squarePosition = Position.topLeft
+    var isAnimating = false
+    var isStopped = true
     
     @IBOutlet var buttonStartStop: UIButton!
     @IBOutlet var labelSquad: UILabel!
+    @IBOutlet var switcher: UISwitch!
     
     override func draw(_ rect: CGRect) {
         self.subviews.first?.layer.cornerRadius = 10
@@ -55,8 +57,10 @@ class SquareView: UIView {
     }
     
     func loopingMovingOfSquare() {
-        self.setSquarePosition(position: self.squarePosition, animated: true) { _ in
-            self.loopingMovingOfSquare()
+        if !self.isStopped {
+            self.setSquarePosition(position: self.squarePosition, animated: true) { _ in
+                self.loopingMovingOfSquare()
+            }
         }
     }
 }
