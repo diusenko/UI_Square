@@ -16,7 +16,6 @@ class SquareView: UIView {
     
     @IBOutlet var buttonStartStop: UIButton!
     @IBOutlet var labelSquad: UILabel!
-    @IBOutlet var switcher: UISwitch!
     
     override func draw(_ rect: CGRect) {
         self.subviews.first?.layer.cornerRadius = 10

@@ -10,10 +10,12 @@ import UIKit
 
 class SquareViewController: UIViewController {
     
-    @IBOutlet var squareView: SquareView!
-    
-    public var anotherSquareView: SquareView? {
-        return self.view as? SquareView
+    public var squareView: SquareView? {
+        if self.isViewLoaded {
+            return self.view as? SquareView
+        }
+        
+        return nil
     }
     
     override func viewDidLoad() {
@@ -21,7 +23,7 @@ class SquareViewController: UIViewController {
     }
 
     @IBAction func onStart(_ sender: UIButton) {
-        self.anotherSquareView.do {
+        self.squareView.do {
             $0.isStopped.toggle()
             $0.loopingMovingOfSquare()
         }
