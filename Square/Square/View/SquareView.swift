@@ -1,6 +1,6 @@
 //
 //  View.swift
-//  Square
+//  SquareViev
 //
 //  Created by Usenko Dmitry on 12/24/18.
 //  Copyright © 2018 Usenko Dmitry. All rights reserved.
@@ -18,7 +18,7 @@ class SquareView: UIView {
         case bottomRight
         case bottomLeft
         
-        var newPosition: SuperPosition {
+        var nextPosition: SuperPosition {
             switch self {
             case .topLeft:
                 return (.topRight, CGPoint(x: 274, y: 0))
@@ -33,13 +33,7 @@ class SquareView: UIView {
     }
     
     private var isAnimating = false
-    private var isStopped = true
     private var squarePosition = Position.topLeft
-    
-    private let topLeft = CGPoint(x: 0, y: 0)
-    private let topRight = CGPoint(x: 274, y: 0)
-    private let bottomRight = CGPoint(x: 274, y: 718)
-    private let bottomLeft = CGPoint(x: 0, y: 718)
     
     @IBOutlet weak var buttonStartStop: UIButton!
     @IBOutlet weak var labelSquad: UILabel!
@@ -49,36 +43,42 @@ class SquareView: UIView {
         self.labelSquad.layer.cornerRadius = 10
     }
     
-    func setSquarePosition() {
-        self.labelSquad.frame.origin = self.squarePosition.newPosition.coordinates
+    func setSquarePosition(position: Position) {
+        self.setSquarePosition(position: position, animated: false)
     }
     
-    func setSquarePosition(duration: TimeInterval) {
+    func setSquarePosition(position: Position, animated: Bool) {
+        self.setSquarePosition(position: position, animated: animated, completionHandler: nil)
+    }
+    
+    func setSquarePosition(
+        position: Position,
+        animated: Bool,
+        completionHandler: ((Bool) -> ())?
+    ) {
         //let transform = CGAffineTransform(translationX: 274, y: 0)
         //self.labelSquad.transform = transform
-        
+        UIView.setAnimationsEnabled(animated)
         if !self.isAnimating {
             self.isAnimating = true
-            UIView.animate(withDuration: duration,
-                animations: { self.setSquarePosition() },
+            UIView.animate(withDuration: 1,
+                animations: {
+                    self.labelSquad.frame.origin = position.nextPosition.coordinates
+                },
                 completion: { finished in
                     self.isAnimating = false
-                    if !self.isStopped {
-                        self.squarePosition = self.squarePosition.newPosition.name
-                        self.setSquarePosition(duration: duration)
+                    if finished {
+                        self.squarePosition = position.nextPosition.name
+                        completionHandler?(finished)
                     }
                 }
             )
         }
     }
     
-    func animation(duration: TimeInterval = 2) {
-        self.isStopped.toggle()
-        if !self.isStopped {
-            self.buttonStartStop.setTitle("Stop", for: .normal)
-            setSquarePosition(duration: duration)
-        } else {
-            self.buttonStartStop.setTitle("Start", for: .normal)
+    func foo() {
+        self.setSquarePosition(position: self.squarePosition, animated: true) { _ in
+            self.foo()
         }
     }
 }

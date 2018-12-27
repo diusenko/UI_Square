@@ -10,6 +10,8 @@ import UIKit
 
 class SquareViewController: UIViewController {
 
+    private var isStopped = true
+    
     @IBOutlet var squareView: SquareView!
     
     public var anotherSquareView: SquareView? {
@@ -18,13 +20,15 @@ class SquareViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let view = UIView()
-        
-        self.view.addSubview(view)
     }
 
     @IBAction func buttonStartStopClick(_ sender: UIButton) {
-        self.anotherSquareView?.animation()
+        self.isStopped.toggle()
+        if !self.isStopped {
+            //self.buttonStartStop.setTitle("Stop", for: .normal)
+            self.squareView.foo()
+        } else {
+            //self.buttonStartStop.setTitle("Start", for: .normal)
+        }
     }
 }
