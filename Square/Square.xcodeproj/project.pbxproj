@@ -15,8 +15,11 @@
 		3F21137421D12DB8005A46E5 /* SquareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F21137221D12DB8005A46E5 /* SquareViewController.swift */; };
 		3F21137521D12DB8005A46E5 /* SquareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F21137321D12DB8005A46E5 /* SquareViewController.xib */; };
 		3F21137721D12F40005A46E5 /* SquareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F21137621D12F40005A46E5 /* SquareView.swift */; };
-		3F5CFF1F21D4DB7E00F3EE85 /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5CFF1E21D4DB7E00F3EE85 /* Types.swift */; };
+		3F5CFF1F21D4DB7E00F3EE85 /* F.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5CFF1E21D4DB7E00F3EE85 /* F.swift */; };
 		3F5CFF2221D4DD6300F3EE85 /* Optional+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5CFF2121D4DD6300F3EE85 /* Optional+Extensions.swift */; };
+		3F5CFF2C21D609BC00F3EE85 /* NSLocking+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5CFF2B21D609BC00F3EE85 /* NSLocking+Extension.swift */; };
+		3F5CFF2E21D60CED00F3EE85 /* Atomic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5CFF2D21D60CED00F3EE85 /* Atomic.swift */; };
+		3F5CFF3121D60D4400F3EE85 /* CGRect+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5CFF3021D60D4400F3EE85 /* CGRect+Extensions.swift */; };
 		3FB277CC21D3DCF500894AE0 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB277CB21D3DCF500894AE0 /* Position.swift */; };
 /* End PBXBuildFile section */
 
@@ -52,8 +55,11 @@
 		3F21137221D12DB8005A46E5 /* SquareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareViewController.swift; sourceTree = "<group>"; };
 		3F21137321D12DB8005A46E5 /* SquareViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SquareViewController.xib; sourceTree = "<group>"; };
 		3F21137621D12F40005A46E5 /* SquareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareView.swift; sourceTree = "<group>"; };
-		3F5CFF1E21D4DB7E00F3EE85 /* Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
+		3F5CFF1E21D4DB7E00F3EE85 /* F.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = F.swift; sourceTree = "<group>"; };
 		3F5CFF2121D4DD6300F3EE85 /* Optional+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+Extensions.swift"; sourceTree = "<group>"; };
+		3F5CFF2B21D609BC00F3EE85 /* NSLocking+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSLocking+Extension.swift"; sourceTree = "<group>"; };
+		3F5CFF2D21D60CED00F3EE85 /* Atomic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Atomic.swift; sourceTree = "<group>"; };
+		3F5CFF3021D60D4400F3EE85 /* CGRect+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect+Extensions.swift"; sourceTree = "<group>"; };
 		3FB277CB21D3DCF500894AE0 /* Position.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,10 +115,9 @@
 				3F21134621D10719005A46E5 /* Assets.xcassets */,
 				3F21134821D10719005A46E5 /* LaunchScreen.storyboard */,
 				3F21134B21D10719005A46E5 /* Info.plist */,
-				3FB277CB21D3DCF500894AE0 /* Position.swift */,
-				3F21136F21D1173F005A46E5 /* View */,
-				3F5CFF1D21D4DB4C00F3EE85 /* F */,
-				3F5CFF2021D4DD4100F3EE85 /* Extensions */,
+				3F5CFF2621D6075400F3EE85 /* UI */,
+				3F5CFF2A21D6092800F3EE85 /* Lib */,
+				3F5CFF2521D6073F00F3EE85 /* Models */,
 			);
 			path = Square;
 			sourceTree = "<group>";
@@ -135,30 +140,82 @@
 			path = SquareUITests;
 			sourceTree = "<group>";
 		};
-		3F21136F21D1173F005A46E5 /* View */ = {
+		3F5CFF1D21D4DB4C00F3EE85 /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				3F5CFF2D21D60CED00F3EE85 /* Atomic.swift */,
+				3F5CFF1E21D4DB7E00F3EE85 /* F.swift */,
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
+		3F5CFF2021D4DD4100F3EE85 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3F5CFF2F21D60D2200F3EE85 /* UIKit */,
+				3F5CFF2821D607A900F3EE85 /* Foundation */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3F5CFF2521D6073F00F3EE85 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3F5CFF2621D6075400F3EE85 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				3FB277CB21D3DCF500894AE0 /* Position.swift */,
+				3F5CFF2721D6075B00F3EE85 /* SquareViewController */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		3F5CFF2721D6075B00F3EE85 /* SquareViewController */ = {
 			isa = PBXGroup;
 			children = (
 				3F21137221D12DB8005A46E5 /* SquareViewController.swift */,
 				3F21137321D12DB8005A46E5 /* SquareViewController.xib */,
 				3F21137621D12F40005A46E5 /* SquareView.swift */,
 			);
-			path = View;
+			path = SquareViewController;
 			sourceTree = "<group>";
 		};
-		3F5CFF1D21D4DB4C00F3EE85 /* F */ = {
+		3F5CFF2821D607A900F3EE85 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
-				3F5CFF1E21D4DB7E00F3EE85 /* Types.swift */,
-			);
-			path = F;
-			sourceTree = "<group>";
-		};
-		3F5CFF2021D4DD4100F3EE85 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
+				3F5CFF2B21D609BC00F3EE85 /* NSLocking+Extension.swift */,
 				3F5CFF2121D4DD6300F3EE85 /* Optional+Extensions.swift */,
 			);
-			path = Extensions;
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		3F5CFF2921D6086B00F3EE85 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		3F5CFF2A21D6092800F3EE85 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				3F5CFF2021D4DD4100F3EE85 /* Extensions */,
+				3F5CFF1D21D4DB4C00F3EE85 /* Types */,
+				3F5CFF2921D6086B00F3EE85 /* Protocols */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		3F5CFF2F21D60D2200F3EE85 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				3F5CFF3021D60D4400F3EE85 /* CGRect+Extensions.swift */,
+			);
+			path = UIKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,10 +350,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F21134021D10717005A46E5 /* AppDelegate.swift in Sources */,
+				3F5CFF3121D60D4400F3EE85 /* CGRect+Extensions.swift in Sources */,
 				3F5CFF2221D4DD6300F3EE85 /* Optional+Extensions.swift in Sources */,
+				3F5CFF2C21D609BC00F3EE85 /* NSLocking+Extension.swift in Sources */,
 				3F21137421D12DB8005A46E5 /* SquareViewController.swift in Sources */,
+				3F5CFF2E21D60CED00F3EE85 /* Atomic.swift in Sources */,
 				3F21137721D12F40005A46E5 /* SquareView.swift in Sources */,
-				3F5CFF1F21D4DB7E00F3EE85 /* Types.swift in Sources */,
+				3F5CFF1F21D4DB7E00F3EE85 /* F.swift in Sources */,
 				3FB277CC21D3DCF500894AE0 /* Position.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

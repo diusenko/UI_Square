@@ -11,11 +11,10 @@ import UIKit
 class SquareViewController: UIViewController {
     
     public var squareView: SquareView? {
-        if self.isViewLoaded {
-            return self.view as? SquareView
-        }
         
-        return nil
+        return when(condition: self.isViewLoaded) {
+            cast(value: self.view)
+        }
     }
     
     override func viewDidLoad() {
