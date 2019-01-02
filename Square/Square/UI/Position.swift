@@ -8,7 +8,6 @@
 
 import UIKit
 
-typealias SuperPosition = (name: Position, coordinates: CGPoint)
 
 enum Position {
     case topLeft
@@ -16,16 +15,16 @@ enum Position {
     case bottomRight
     case bottomLeft
     
-    var nextPosition: SuperPosition {
+    var nextPosition: Position {
         switch self {
         case .topLeft:
-            return (.topRight, CGPoint(x: 274, y: 0))
+            return .topRight
         case .topRight:
-            return (.bottomRight, CGPoint(x: 274, y: 718))
+            return .bottomRight
         case .bottomRight:
-            return (.bottomLeft, CGPoint(x: 0, y: 718))
+            return .bottomLeft
         case .bottomLeft:
-            return (.topLeft, CGPoint(x: 0, y: 0))
+            return .topLeft
         }
     }
 }

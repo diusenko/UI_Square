@@ -16,6 +16,7 @@ class SquareView: UIView {
     
     @IBOutlet var buttonStartStop: UIButton!
     @IBOutlet var labelSquad: UILabel!
+    @IBOutlet weak var baseView: UIView!
     
     override func draw(_ rect: CGRect) {
         self.subviews.first?.layer.cornerRadius = 10
@@ -43,12 +44,12 @@ class SquareView: UIView {
             self.isAnimating = true
             UIView.animate(withDuration: 1,
                 animations: {
-                    self.labelSquad.frame.origin = position.nextPosition.coordinates
+                    self.labelSquad.frame.origin = self.point(position: self.squarePosition)
                 },
                 completion: { finished in
                     self.isAnimating = false
                     if finished {
-                        self.squarePosition = position.nextPosition.name
+                        self.squarePosition = self.squarePosition.nextPosition
                         completionHandler?(finished)
                     }
                 }
@@ -62,5 +63,22 @@ class SquareView: UIView {
                 self.loopingMovingOfSquare()
             }
         }
+    }
+    
+    private func point(position: Position) -> CGPoint {
+        let baseViewBounds = self.baseView.bounds
+        var result = baseViewBounds.topLeft
+        
+        switch position {
+        case .topLeft: break
+        case .topRight:
+            result = baseViewBounds.topRight
+        case .bottomRight:
+            result = baseViewBounds.bottomRight
+        case .bottomLeft:
+            result = baseViewBounds.bottomLeft
+        }
+        
+        return result
     }
 }

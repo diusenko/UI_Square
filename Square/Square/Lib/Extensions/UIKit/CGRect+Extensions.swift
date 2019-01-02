@@ -10,6 +10,16 @@ import UIKit
 
 extension CGRect {
     
+    var x: CGFloat {
+        get { return self.origin.x }
+        set { return self.origin.x = newValue }
+    }
+    
+    var y: CGFloat {
+        get { return self.origin.y }
+        set { return self.origin.y = newValue }
+    }
+    
     var topLeft: CGPoint {
         return CGPoint(x: self.minX, y: self.minY)
     }
@@ -26,11 +36,11 @@ extension CGRect {
         return CGPoint(x: self.minX, y: self.maxY)
     }
     
-    var leftCenter: CGPoint {
+    var middleLeft: CGPoint {
         return CGPoint(x: self.minX, y: self.midY)
     }
     
-    var rightCenter: CGPoint {
+    var middleRight: CGPoint {
         return CGPoint(x: self.maxX, y: self.midY)
     }
     
@@ -38,11 +48,11 @@ extension CGRect {
         return CGPoint(x: self.midX, y: self.midY)
     }
     
-    var topCenter: CGPoint {
+    var middleTop: CGPoint {
         return CGPoint(x: self.midX, y: self.minY)
     }
     
-    var bottomCenter: CGPoint {
+    var middleBottom: CGPoint {
         return CGPoint(x: self.midX, y: self.maxY)
     }
 }
