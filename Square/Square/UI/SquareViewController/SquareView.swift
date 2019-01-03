@@ -8,20 +8,40 @@
 
 import UIKit
 
+struct Strings {
+    static let stop = "Stop"
+    static let start = "Start"
+}
+
 class SquareView: UIView {
     
-    private var squarePosition = Position.topLeft
+    @IBOutlet var buttonStartStop: UIButton?
+    @IBOutlet var labelSquad: UILabel?
+    @IBOutlet var baseView: UIView?
+    
     var isAnimating = false
     var isStopped = true
     
-    @IBOutlet var buttonStartStop: UIButton!
-    @IBOutlet var labelSquad: UILabel!
-    @IBOutlet weak var baseView: UIView!
+    private var squarePosition = Position.topLeft
+    private var safeArea = CGRect.zero
     
-    override func draw(_ rect: CGRect) {
-        self.subviews.first?.layer.cornerRadius = 10
-        self.labelSquad.layer.cornerRadius = 10
-        super.draw(rect)
+    private let trajectory = Generator(Position.topLeft, .topRight, .bottomRight, .bottomLeft)
+    
+    // question about class IBDesignable
+    override func layoutSubviews() {
+        let labelSquad = self.labelSquad
+        let baseView = self.baseView
+        labelSquad?.cornerRadius = 10
+        baseView?.cornerRadius = 10
+        baseView.do {
+            if let labelBounds = labelSquad?.bounds {
+                self.safeArea = $0.bounds.cropped(
+                    right: labelBounds.width,
+                    bottom: labelBounds.height
+                )
+
+            }
+        }
     }
     
     func setSquarePosition(position: Position) {
@@ -29,7 +49,11 @@ class SquareView: UIView {
     }
     
     func setSquarePosition(position: Position, animated: Bool) {
-        self.setSquarePosition(position: position, animated: animated, completionHandler: nil)
+        self.setSquarePosition(
+            position: position,
+            animated: animated,
+            completionHandler: nil
+        )
     }
     
     func setSquarePosition(
@@ -37,19 +61,16 @@ class SquareView: UIView {
         animated: Bool,
         completionHandler: ((Bool) -> ())?
     ) {
-        //let transform = CGAffineTransform(translationX: 274, y: 0)
-        //self.labelSquad.transform = transform
-        UIView.setAnimationsEnabled(animated)
         if !self.isAnimating {
             self.isAnimating = true
-            UIView.animate(withDuration: 1,
+            UIView.animate(withDuration: animated ? 2 : 0,
                 animations: {
-                    self.labelSquad.frame.origin = self.point(position: self.squarePosition)
+                    self.labelSquad?.frame.origin = self.point(position: self.squarePosition)
                 },
                 completion: { finished in
                     self.isAnimating = false
                     if finished {
-                        self.squarePosition = self.squarePosition.nextPosition
+                        self.squarePosition = self.trajectory.next()
                         completionHandler?(finished)
                     }
                 }
@@ -66,17 +87,17 @@ class SquareView: UIView {
     }
     
     private func point(position: Position) -> CGPoint {
-        let baseViewBounds = self.baseView.bounds
-        var result = baseViewBounds.topLeft
+        let safeArea = self.safeArea
+        var result = safeArea.topLeft
         
         switch position {
         case .topLeft: break
         case .topRight:
-            result = baseViewBounds.topRight
+            result = safeArea.topRight
         case .bottomRight:
-            result = baseViewBounds.bottomRight
+            result = safeArea.bottomRight
         case .bottomLeft:
-            result = baseViewBounds.bottomLeft
+            result = safeArea.bottomLeft
         }
         
         return result

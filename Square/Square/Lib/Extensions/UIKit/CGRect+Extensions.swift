@@ -55,4 +55,13 @@ extension CGRect {
     var middleBottom: CGPoint {
         return CGPoint(x: self.midX, y: self.maxY)
     }
+    
+    func cropped(right: CGFloat, bottom: CGFloat) -> CGRect {
+        return CGRect(
+            x: self.x,
+            y: self.y,
+            width: self.width - right,
+            height: self.height - bottom
+        )
+    }
 }

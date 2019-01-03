@@ -14,17 +14,4 @@ enum Position {
     case topRight
     case bottomRight
     case bottomLeft
-    
-    var nextPosition: Position {
-        switch self {
-        case .topLeft:
-            return .topRight
-        case .topRight:
-            return .bottomRight
-        case .bottomRight:
-            return .bottomLeft
-        case .bottomLeft:
-            return .topLeft
-        }
-    }
 }
