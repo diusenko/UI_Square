@@ -13,6 +13,7 @@ class SquareView: UIView {
     typealias Position = CGRect.Position
     
     struct Strings {
+        
         static let stop = "Stop"
         static let start = "Start"
     }
