@@ -85,9 +85,12 @@ class SquareView: UIView {
     
     private func loopingMovingOfSquare() {
         if !self.isStopped {
+            self.buttonStartStop?.setTitle(Strings.stop, for: .normal)
             self.setSquarePosition(position: self.squarePosition, animated: true) { _ in
                 self.loopingMovingOfSquare()
             }
+        } else {
+            self.buttonStartStop?.setTitle(Strings.start, for: .normal)
         }
     }
     
