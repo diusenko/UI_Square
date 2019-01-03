@@ -25,7 +25,11 @@ class SquareView: UIView {
     private var squarePosition = Position.topLeft
     private var safeArea = CGRect.zero
     
-    private let trajectory = Generator(Position.topLeft, .topRight, .bottomRight, .bottomLeft)
+    private let trajectory = InfiniteSecuenceGenerator(Position.topLeft,
+        .topRight,
+        .bottomRight,
+        .bottomLeft
+    )
     
     // question about class IBDesignable
     override func layoutSubviews() {
@@ -39,7 +43,6 @@ class SquareView: UIView {
                     right: labelBounds.width,
                     bottom: labelBounds.height
                 )
-
             }
         }
     }

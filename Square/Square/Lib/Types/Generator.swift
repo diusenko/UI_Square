@@ -8,7 +8,7 @@
 
 import Foundation
 
-final class Generator<Value> {
+final class InfiniteSecuenceGenerator<Value> {
     
     private let values: [Value]
     private let index = Atomic(0)

@@ -144,6 +144,14 @@
 			path = SquareUITests;
 			sourceTree = "<group>";
 		};
+		3F592A5E21DDF9B2008ADF27 /* CoreGraphics */ = {
+			isa = PBXGroup;
+			children = (
+				3F5CFF3021D60D4400F3EE85 /* CGRect+Extensions.swift */,
+			);
+			path = CoreGraphics;
+			sourceTree = "<group>";
+		};
 		3F5CFF1D21D4DB4C00F3EE85 /* Types */ = {
 			isa = PBXGroup;
 			children = (
@@ -157,6 +165,7 @@
 		3F5CFF2021D4DD4100F3EE85 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				3F592A5E21DDF9B2008ADF27 /* CoreGraphics */,
 				3F5CFF2F21D60D2200F3EE85 /* UIKit */,
 				3F5CFF2821D607A900F3EE85 /* Foundation */,
 			);
@@ -218,7 +227,6 @@
 		3F5CFF2F21D60D2200F3EE85 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				3F5CFF3021D60D4400F3EE85 /* CGRect+Extensions.swift */,
 				3F5CE64021DCF6E500D505EA /* UIView+CornerRadius.swift */,
 			);
 			path = UIKit;
