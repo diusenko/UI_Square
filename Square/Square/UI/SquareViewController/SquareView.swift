@@ -8,19 +8,21 @@
 
 import UIKit
 
-struct Strings {
-    static let stop = "Stop"
-    static let start = "Start"
-}
-
 class SquareView: UIView {
+    
+    typealias Position = CGRect.Position
+    
+    struct Strings {
+        static let stop = "Stop"
+        static let start = "Start"
+    }
     
     @IBOutlet var buttonStartStop: UIButton?
     @IBOutlet var labelSquad: UILabel?
     @IBOutlet var baseView: UIView?
     
-    var isAnimating = false
-    var isStopped = true
+    private(set) var isAnimating = false
+    private(set) var isStopped = true
     
     private var squarePosition = Position.topLeft
     private var safeArea = CGRect.zero
@@ -81,12 +83,17 @@ class SquareView: UIView {
         }
     }
     
-    func loopingMovingOfSquare() {
+    private func loopingMovingOfSquare() {
         if !self.isStopped {
             self.setSquarePosition(position: self.squarePosition, animated: true) { _ in
                 self.loopingMovingOfSquare()
             }
         }
+    }
+    
+    func startLoopingMoving() {
+        self.isStopped.toggle()
+        self.loopingMovingOfSquare()
     }
     
     private func point(position: Position) -> CGPoint {

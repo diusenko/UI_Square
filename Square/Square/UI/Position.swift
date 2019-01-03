@@ -7,11 +7,3 @@
 //
 
 import UIKit
-
-
-enum Position {
-    case topLeft
-    case topRight
-    case bottomRight
-    case bottomLeft
-}

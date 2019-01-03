@@ -10,6 +10,13 @@ import CoreGraphics
 
 extension CGRect {
     
+    enum Position {
+        case topLeft
+        case topRight
+        case bottomRight
+        case bottomLeft
+    }
+    
     var x: CGFloat {
         get { return self.origin.x }
         set { return self.origin.x = newValue }

@@ -8,23 +8,15 @@
 
 import UIKit
 
-class SquareViewController: UIViewController {
+class SquareViewController: UIViewController, RootViewRepresentable {
     
-    public var squareView: SquareView? {
-        
-        return when(condition: self.isViewLoaded) {
-            cast(value: self.view)
-        }
-    }
-    
+    typealias RootView = SquareView
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 
     @IBAction func onStart(_ sender: UIButton) {
-        self.squareView.do {
-            $0.isStopped.toggle()
-            $0.loopingMovingOfSquare()
-        }
+        self.squareView?.startLoopingMoving()
     }
 }

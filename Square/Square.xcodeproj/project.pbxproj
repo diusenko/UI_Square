@@ -15,6 +15,7 @@
 		3F21137421D12DB8005A46E5 /* SquareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F21137221D12DB8005A46E5 /* SquareViewController.swift */; };
 		3F21137521D12DB8005A46E5 /* SquareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F21137321D12DB8005A46E5 /* SquareViewController.xib */; };
 		3F21137721D12F40005A46E5 /* SquareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F21137621D12F40005A46E5 /* SquareView.swift */; };
+		3F592A6221DDFF5A008ADF27 /* RootViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F592A6121DDFF5A008ADF27 /* RootViewRepresentable.swift */; };
 		3F5CE63F21DCCF7B00D505EA /* Generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5CE63E21DCCF7B00D505EA /* Generator.swift */; };
 		3F5CE64121DCF6E500D505EA /* UIView+CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5CE64021DCF6E500D505EA /* UIView+CornerRadius.swift */; };
 		3F5CFF1F21D4DB7E00F3EE85 /* F.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5CFF1E21D4DB7E00F3EE85 /* F.swift */; };
@@ -57,6 +58,7 @@
 		3F21137221D12DB8005A46E5 /* SquareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareViewController.swift; sourceTree = "<group>"; };
 		3F21137321D12DB8005A46E5 /* SquareViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SquareViewController.xib; sourceTree = "<group>"; };
 		3F21137621D12F40005A46E5 /* SquareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareView.swift; sourceTree = "<group>"; };
+		3F592A6121DDFF5A008ADF27 /* RootViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewRepresentable.swift; sourceTree = "<group>"; };
 		3F5CE63E21DCCF7B00D505EA /* Generator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Generator.swift; sourceTree = "<group>"; };
 		3F5CE64021DCF6E500D505EA /* UIView+CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+CornerRadius.swift"; sourceTree = "<group>"; };
 		3F5CFF1E21D4DB7E00F3EE85 /* F.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = F.swift; sourceTree = "<group>"; };
@@ -152,6 +154,14 @@
 			path = CoreGraphics;
 			sourceTree = "<group>";
 		};
+		3F592A6021DDFF24008ADF27 /* Mixin */ = {
+			isa = PBXGroup;
+			children = (
+				3F592A6121DDFF5A008ADF27 /* RootViewRepresentable.swift */,
+			);
+			path = Mixin;
+			sourceTree = "<group>";
+		};
 		3F5CFF1D21D4DB4C00F3EE85 /* Types */ = {
 			isa = PBXGroup;
 			children = (
@@ -217,6 +227,7 @@
 		3F5CFF2A21D6092800F3EE85 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				3F592A6021DDFF24008ADF27 /* Mixin */,
 				3F5CFF2021D4DD4100F3EE85 /* Extensions */,
 				3F5CFF1D21D4DB4C00F3EE85 /* Types */,
 				3F5CFF2921D6086B00F3EE85 /* Protocols */,
@@ -364,6 +375,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F21134021D10717005A46E5 /* AppDelegate.swift in Sources */,
+				3F592A6221DDFF5A008ADF27 /* RootViewRepresentable.swift in Sources */,
 				3F5CFF3121D60D4400F3EE85 /* CGRect+Extensions.swift in Sources */,
 				3F5CFF2221D4DD6300F3EE85 /* Optional+Extensions.swift in Sources */,
 				3F5CFF2C21D609BC00F3EE85 /* NSLocking+Extension.swift in Sources */,
