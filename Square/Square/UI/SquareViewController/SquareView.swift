@@ -19,8 +19,8 @@ class SquareView: UIView {
     }
     
     @IBOutlet var buttonStartStop: UIButton?
-    @IBOutlet var labelSquad: UILabel?
     @IBOutlet var baseView: UIView?
+    @IBOutlet var square: CornerView?
     
     private(set) var isAnimating = false
     private(set) var isStopped = true
@@ -36,15 +36,11 @@ class SquareView: UIView {
     
     // question about class IBDesignable
     override func layoutSubviews() {
-        let labelSquad = self.labelSquad
-        let baseView = self.baseView
-        labelSquad?.cornerRadius = 10
-        baseView?.cornerRadius = 10
-        baseView.do {
-            if let labelBounds = labelSquad?.bounds {
+        self.baseView.do {
+            if let squareBounds = self.square?.bounds {
                 self.safeArea = $0.bounds.cropped(
-                    right: labelBounds.width,
-                    bottom: labelBounds.height
+                    right: squareBounds.width,
+                    bottom: squareBounds.height
                 )
             }
         }
@@ -71,7 +67,7 @@ class SquareView: UIView {
             self.isAnimating = true
             UIView.animate(withDuration: animated ? 2 : 0,
                 animations: {
-                    self.labelSquad?.frame.origin = self.point(position: self.squarePosition)
+                    self.square?.frame.origin = self.point(position: self.squarePosition)
                 },
                 completion: { finished in
                     self.isAnimating = false

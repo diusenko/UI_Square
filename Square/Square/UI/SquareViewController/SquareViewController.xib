@@ -18,18 +18,10 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view clipsSubviews="YES" contentMode="scaleToFill" id="o0c-po-yIL" userLabel="BaseView">
-                    <rect key="frame" x="20" y="44" width="374" height="818"/>
+                <view clipsSubviews="YES" contentMode="scaleToFill" id="o0c-po-yIL" userLabel="BaseView" customClass="CornerView" customModule="Square" customModuleProvider="target">
+                    <rect key="frame" x="20" y="57" width="374" height="818"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="R3s-mE-ZLR">
-                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" red="1" green="0.59364149730000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="VUs-aR-iqY">
                             <rect key="frame" x="105" y="353" width="155" height="90"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
@@ -39,15 +31,30 @@
                                 <action selector="onStart:" destination="-1" eventType="touchUpInside" id="inc-lc-D2O"/>
                             </connections>
                         </button>
+                        <view contentMode="scaleToFill" id="4z9-z8-yC2" customClass="CornerView" customModule="Square" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="1" green="0.59364149730000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="20"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" red="1" green="0.99828848113249058" blue="0.29845266875105803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="20"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                 </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <connections>
                 <outlet property="baseView" destination="o0c-po-yIL" id="rJ8-Ym-xKc"/>
                 <outlet property="buttonStartStop" destination="VUs-aR-iqY" id="0tY-BX-rga"/>
-                <outlet property="labelSquad" destination="R3s-mE-ZLR" id="4HO-YX-Ys9"/>
+                <outlet property="square" destination="4z9-z8-yC2" id="FnZ-3c-qra"/>
             </connections>
             <point key="canvasLocation" x="528.98550724637687" y="-155.35714285714286"/>
         </view>
