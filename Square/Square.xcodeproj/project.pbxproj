@@ -16,7 +16,9 @@
 		3F21137521D12DB8005A46E5 /* SquareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F21137321D12DB8005A46E5 /* SquareViewController.xib */; };
 		3F21137721D12F40005A46E5 /* SquareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F21137621D12F40005A46E5 /* SquareView.swift */; };
 		3F592A6221DDFF5A008ADF27 /* RootViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F592A6121DDFF5A008ADF27 /* RootViewRepresentable.swift */; };
-		3F596F6421E49569005EA178 /* CornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F596F6321E49569005EA178 /* CornerView.swift */; };
+		3F596F6621E5F533005EA178 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F596F6521E5F533005EA178 /* BaseView.swift */; };
+		3F596F6821E5F7FF005EA178 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F596F6721E5F7FF005EA178 /* Strings.swift */; };
+		3F596F6B21E5F815005EA178 /* Duration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F596F6A21E5F815005EA178 /* Duration.swift */; };
 		3F5CE63F21DCCF7B00D505EA /* Generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5CE63E21DCCF7B00D505EA /* Generator.swift */; };
 		3F5CE64121DCF6E500D505EA /* UIView+CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5CE64021DCF6E500D505EA /* UIView+CornerRadius.swift */; };
 		3F5CFF1F21D4DB7E00F3EE85 /* F.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5CFF1E21D4DB7E00F3EE85 /* F.swift */; };
@@ -59,7 +61,9 @@
 		3F21137321D12DB8005A46E5 /* SquareViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SquareViewController.xib; sourceTree = "<group>"; };
 		3F21137621D12F40005A46E5 /* SquareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareView.swift; sourceTree = "<group>"; };
 		3F592A6121DDFF5A008ADF27 /* RootViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewRepresentable.swift; sourceTree = "<group>"; };
-		3F596F6321E49569005EA178 /* CornerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerView.swift; sourceTree = "<group>"; };
+		3F596F6521E5F533005EA178 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		3F596F6721E5F7FF005EA178 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		3F596F6A21E5F815005EA178 /* Duration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Duration.swift; sourceTree = "<group>"; };
 		3F5CE63E21DCCF7B00D505EA /* Generator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Generator.swift; sourceTree = "<group>"; };
 		3F5CE64021DCF6E500D505EA /* UIView+CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+CornerRadius.swift"; sourceTree = "<group>"; };
 		3F5CFF1E21D4DB7E00F3EE85 /* F.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = F.swift; sourceTree = "<group>"; };
@@ -167,6 +171,8 @@
 				3F5CFF2D21D60CED00F3EE85 /* Atomic.swift */,
 				3F5CFF1E21D4DB7E00F3EE85 /* F.swift */,
 				3F5CE63E21DCCF7B00D505EA /* Generator.swift */,
+				3F596F6721E5F7FF005EA178 /* Strings.swift */,
+				3F596F6A21E5F815005EA178 /* Duration.swift */,
 			);
 			path = Types;
 			sourceTree = "<group>";
@@ -203,7 +209,7 @@
 				3F21137221D12DB8005A46E5 /* SquareViewController.swift */,
 				3F21137321D12DB8005A46E5 /* SquareViewController.xib */,
 				3F21137621D12F40005A46E5 /* SquareView.swift */,
-				3F596F6321E49569005EA178 /* CornerView.swift */,
+				3F596F6521E5F533005EA178 /* BaseView.swift */,
 			);
 			path = SquareViewController;
 			sourceTree = "<group>";
@@ -377,11 +383,13 @@
 				3F21134021D10717005A46E5 /* AppDelegate.swift in Sources */,
 				3F592A6221DDFF5A008ADF27 /* RootViewRepresentable.swift in Sources */,
 				3F5CFF3121D60D4400F3EE85 /* CGRect+Extensions.swift in Sources */,
+				3F596F6621E5F533005EA178 /* BaseView.swift in Sources */,
 				3F5CFF2221D4DD6300F3EE85 /* Optional+Extensions.swift in Sources */,
+				3F596F6B21E5F815005EA178 /* Duration.swift in Sources */,
 				3F5CFF2C21D609BC00F3EE85 /* NSLocking+Extension.swift in Sources */,
 				3F21137421D12DB8005A46E5 /* SquareViewController.swift in Sources */,
+				3F596F6821E5F7FF005EA178 /* Strings.swift in Sources */,
 				3F5CFF2E21D60CED00F3EE85 /* Atomic.swift in Sources */,
-				3F596F6421E49569005EA178 /* CornerView.swift in Sources */,
 				3F21137721D12F40005A46E5 /* SquareView.swift in Sources */,
 				3F5CE64121DCF6E500D505EA /* UIView+CornerRadius.swift in Sources */,
 				3F5CFF1F21D4DB7E00F3EE85 /* F.swift in Sources */,

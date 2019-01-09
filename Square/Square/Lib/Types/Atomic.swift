@@ -55,7 +55,7 @@ class Atomic<Value> {
         }
     }
     
-    func transform<Result>(_ action: (ValueType) -> Result) -> Result {
+    public func transform<Result>(_ action: (ValueType) -> Result) -> Result {
         return self.lock.locked {
             action(self.mutableValue)
         }

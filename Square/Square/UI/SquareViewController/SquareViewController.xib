@@ -18,7 +18,7 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view clipsSubviews="YES" contentMode="scaleToFill" id="o0c-po-yIL" userLabel="BaseView" customClass="CornerView" customModule="Square" customModuleProvider="target">
+                <view clipsSubviews="YES" contentMode="scaleToFill" id="o0c-po-yIL" userLabel="BaseView" customClass="BaseView" customModule="Square" customModuleProvider="target">
                     <rect key="frame" x="20" y="57" width="374" height="818"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     <subviews>
@@ -31,7 +31,7 @@
                                 <action selector="onStart:" destination="-1" eventType="touchUpInside" id="inc-lc-D2O"/>
                             </connections>
                         </button>
-                        <view contentMode="scaleToFill" id="4z9-z8-yC2" customClass="CornerView" customModule="Square" customModuleProvider="target">
+                        <view contentMode="scaleToFill" id="4z9-z8-yC2">
                             <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" red="1" green="0.59364149730000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -48,13 +48,15 @@
                             <real key="value" value="20"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="button" destination="VUs-aR-iqY" id="0SI-Ud-XxY"/>
+                        <outlet property="square" destination="4z9-z8-yC2" id="T2o-8m-ZvA"/>
+                    </connections>
                 </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <connections>
                 <outlet property="baseView" destination="o0c-po-yIL" id="rJ8-Ym-xKc"/>
-                <outlet property="buttonStartStop" destination="VUs-aR-iqY" id="0tY-BX-rga"/>
-                <outlet property="square" destination="4z9-z8-yC2" id="FnZ-3c-qra"/>
             </connections>
             <point key="canvasLocation" x="528.98550724637687" y="-155.35714285714286"/>
         </view>

@@ -15,6 +15,11 @@ extension CGRect {
         case topRight
         case bottomRight
         case bottomLeft
+        case middleLeft
+        case middleRight
+        case middleTop
+        case middleBottom
+        case center
     }
     
     var x: CGFloat {
@@ -36,7 +41,7 @@ extension CGRect {
     }
     
     var bottomRight: CGPoint {
-        return CGPoint(x: maxX, y: maxY)
+        return CGPoint(x: self.maxX, y: self.maxY)
     }
     
     var bottomLeft: CGPoint {
@@ -70,5 +75,19 @@ extension CGRect {
             width: self.width - right,
             height: self.height - bottom
         )
+    }
+    
+    func point(position: Position) -> CGPoint {
+        switch position {
+        case .topLeft: return self.topLeft
+        case .topRight: return self.topRight
+        case .bottomRight: return self.bottomRight
+        case .bottomLeft: return self.bottomLeft
+        case .middleLeft: return self.middleLeft
+        case .middleRight: return self.middleLeft
+        case .middleTop: return self.middleTop
+        case .middleBottom: return self.middleBottom
+        case .center: return self.center
+        }
     }
 }

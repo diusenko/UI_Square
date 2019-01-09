@@ -13,24 +13,19 @@ final class InfiniteSecuenceGenerator<Value> {
     private let values: [Value]
     private let index = Atomic(0)
     
-    init(_ values: [Value]) {
+    public init(_ values: [Value]) {
         self.values = values
     }
     
-    convenience init(_ values: Value...) {
+    public convenience init(_ values: Value...) {
         self.init(values)
     }
     
-    func next() -> Value {
-        let index:Int = self.index.modify { index in
-            
-            defer {
-                index = (index + 1) % self.values.count
-            }
-            
-            return index
-        }
+    public func next() -> Value {
+        return self.index.modify { index in
+            index = (index + 1) % self.values.count
         
-        return values[index]
+            return values[index]
+        }
     }
 }
