@@ -17,6 +17,6 @@ class SquareViewController: UIViewController, RootViewRepresentable {
     }
 
     @IBAction func onStart(_ sender: UIButton) {
-        self.squareView?.startLoopingMoving()
+        self.rootView?.startLoopingMoving()
     }
 }
