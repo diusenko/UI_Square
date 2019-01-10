@@ -45,7 +45,7 @@ class BaseView: UIView {
                 completion: { finished in
                     self.isAnimating = false
                     if finished {
-                        self.squarePosition = position
+                        self.squarePosition = self.trajectory.next()
                         completionHandler?(finished)
                     }
                 }
@@ -55,7 +55,7 @@ class BaseView: UIView {
     
     private func loopingMovingOfSquare() {
         if !isStopped {
-            self.setSquarePosition(position: self.trajectory.next(), animated: true) { _ in
+            self.setSquarePosition(position: self.squarePosition, animated: true) { _ in
                 self.loopingMovingOfSquare()
             }
         }
