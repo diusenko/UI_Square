@@ -15,7 +15,7 @@ protocol RootViewRepresentable {
 
 extension RootViewRepresentable where Self: UIViewController {
     
-    var squareView: SquareView? {
+    var rootView: RootView? {
         
         return when(condition: self.isViewLoaded) {
             cast(value: self.view)
